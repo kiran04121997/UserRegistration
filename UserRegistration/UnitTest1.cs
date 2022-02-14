@@ -27,16 +27,16 @@ namespace UserRegistration
         public void TestLastName_ReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidateFirstName("Kumar");
+            var actual = UserRegister.ValidateLastName("Kumar");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
         public void TestLastName_ReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateFirstName("Ka");
+            var actual = UserRegister.ValidateLastName("Ka");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateFirstName("kumar");
+            var actual1 = UserRegister.ValidateLastName("kumar");
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
@@ -56,6 +56,20 @@ namespace UserRegistration
             Assert.AreEqual(excepted, actual1);
             var actual2 = UserRegister.ValidateMobileNumber("91 70678454858");
             Assert.AreEqual(excepted, actual2);
+        }
+        [TestMethod]
+        public void TestPassword_ReturnTrue()
+        {
+            string excepted = "true";
+            var actual = UserRegister.ValidatePassword("Saurav76");
+            Assert.AreEqual(excepted, actual);
+        }
+        [TestMethod]
+        public void TestPassword_ReturnFalse()
+        {
+            string excepted = "false";
+            var actual = UserRegister.ValidatePassword("saurav");
+            Assert.AreEqual(excepted, actual);
         }
     }
 
