@@ -13,7 +13,7 @@ namespace UserRegistrationProject
         public static string firstNamePattern = "^[A-Z]{1}[a-z]{2}";
         public static string lastNamePattern = "^[A-Z]{1}[a-z]{2}";
         public static string mobilePattern = "^([9][1])[ ]*[6-9]{1}[0-9]{9}$";
-        public static string passwordPatternR1 = "^[a-zA-Z0-9]{8}";
+        public static string passwordPatternR2 = "^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).{8,}";
         //Method to Validate First Name
         public static string ValidatePattern(string userInput, string pattern)
         {
@@ -43,7 +43,7 @@ namespace UserRegistrationProject
         //Method to Validate Mobile Nuber
         public static string ValidatePassword(string pass)
         {
-            var passMatch = ValidatePattern(pass, passwordPatternR1);
+            var passMatch = ValidatePattern(pass, passwordPatternR2);
             return passMatch;
         }
     }

@@ -8,10 +8,6 @@ namespace UserRegistrationProject
 {
     public class Program
     {
-        /* UC-4-UserRegistration
-         * Validate Mobile Number starts with Country Code and have atlest 1 space after code.
-         * and then after country code it should have 10 numbers only.
-         */
         //Method to perform UserRegistration
         public static void UserRegistration()
         {
