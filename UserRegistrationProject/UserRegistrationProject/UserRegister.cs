@@ -7,18 +7,27 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationProject
 {
-        public class UserRegister
+    public class UserRegister
+    {
+        // Static Variable
+        public static string firstNamePattern = "^[A-Z]{1}[a-z]{2}";
+        public static string lastNamePattern = "^[A-Z]{1}[a-z]{2}";
+        //Method to Validate First Name
+        public static string ValidateFirstName(string name)
         {
-            // Static Variable
-            public static string firstNamePattern = "^[A-Z]{1}[a-z]{2}";
-            //Method to Validate First Name
-            public static string ValidateFirstName(string name)
-            {
-                if (Regex.IsMatch(name, firstNamePattern))
-                    return "true";
-                else
-                    return "false";
-            }
+            if (Regex.IsMatch(name, firstNamePattern))
+                return "true";
+            else
+                return "false";
         }
-    
+        //Method to Validate Last Name
+        public static string ValidateLastName(string name)
+        {
+            if (Regex.IsMatch(name, lastNamePattern))
+                return "true";
+            else
+                return "false";
+        }
+    }
+
 }
