@@ -8,14 +8,16 @@ namespace UserRegistration
     public class UnitTest1
     {
         [TestMethod]
-        public void TestFirstName_ReturnTrue()
+        [TestCategory("FirstName_ReturnTrue")]
+        public void GivenFirstNameShouldReturnTrue()
         {
             string excepted = "true";
             var actual = UserRegister.ValidateFirstName("Saurav");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
-        public void TestFirstName_ReturnFalse()
+        [TestCategory("FirstName_ReturnFalse")]
+        public void GivenFirstNameShouldReturnFalse()
         {
             string excepted = "false";
             var actual = UserRegister.ValidateFirstName("Sa");
@@ -24,14 +26,16 @@ namespace UserRegistration
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
-        public void TestLastName_ReturnTrue()
+        [TestCategory("LastName_ReturnTrue")]
+        public void GivenLastNameShouldReturnTrue()
         {
             string excepted = "true";
             var actual = UserRegister.ValidateLastName("Kumar");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
-        public void TestLastName_ReturnFalse()
+        [TestCategory("LastName_ReturnFalse")]
+        public void GivenLastNameShouldReturnFalse()
         {
             string excepted = "false";
             var actual = UserRegister.ValidateLastName("Ka");
@@ -40,14 +44,16 @@ namespace UserRegistration
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
-        public void TestEmailID_ReturnTrue()
+        [TestCategory("EmailId_ReturnTrue")]
+        public void GivenEmailIDshouldReturnTrue()
         {
             string excepted = "true";
             var actual = UserRegister.ValidateEmailID("saurav@gmail.co.in");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
-        public void TestEmailID_ReturnFalse()
+        [TestCategory("EmailId_ReturnFalse")]
+        public void GivenEmailIDShouldReturnFalse()
         {
             string excepted = "false";
             var actual = UserRegister.ValidateEmailID("saurav.kr@g.in");
@@ -56,14 +62,16 @@ namespace UserRegistration
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
-        public void TestMobileNumber_ReturnTrue()
+        [TestCategory("MobileNumber_ReturnTrue")]
+        public void GivenMobileNumberShouldReturnTrue()
         {
             string excepted = "true";
             var actual = UserRegister.ValidateMobileNumber("91 7067845485");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
-        public void TestMobileNumber_ReturnFalse()
+        [TestCategory("MobileNumber_ReturnFalse")]
+        public void GivenMobileNumberShouldReturnFalse()
         {
             string excepted = "false";
             var actual = UserRegister.ValidateMobileNumber("7067845485");
@@ -74,14 +82,16 @@ namespace UserRegistration
             Assert.AreEqual(excepted, actual2);
         }
         [TestMethod]
-        public void TestPassword_ReturnTrue()
+        [TestCategory("Password_ReturnTrue")]
+        public void GivenPasswordShouldReturnTrue()
         {
             string excepted = "true";
             var actual = UserRegister.ValidatePassword("SauGav76@#$");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
-        public void TestPassword_ReturnFalse()
+        [TestCategory("Password_ReturnFalse")]
+        public void GivenPasswordShouldReturnFalse()
         {
             string excepted = "false";
             var actual = UserRegister.ValidatePassword("S9a@#$j");

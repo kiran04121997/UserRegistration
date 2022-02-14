@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationProject
 {
-    public class Program
-    {
+     public class Program
+    {    
         //Method to perform UserRegistration
         public static void UserRegistration()
         {
@@ -54,7 +54,7 @@ namespace UserRegistrationProject
                         Console.WriteLine("Enter Correct Option!");
                         break;
                 }
-            }
+            }         
         }
         //Program Entry Point
         static void Main(string[] args)
