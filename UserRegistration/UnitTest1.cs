@@ -40,6 +40,22 @@ namespace UserRegistration
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
+        public void TestEmailID_ReturnTrue()
+        {
+            string excepted = "true";
+            var actual = UserRegister.ValidateEmailID("saurav@gmail.co.in");
+            Assert.AreEqual(excepted, actual);
+        }
+        [TestMethod]
+        public void TestEmailID_ReturnFalse()
+        {
+            string excepted = "false";
+            var actual = UserRegister.ValidateEmailID("saurav.kr@g.in");
+            Assert.AreEqual(excepted, actual);
+            var actual1 = UserRegister.ValidateEmailID(".kr@gmail.com.in");
+            Assert.AreEqual(excepted, actual1);
+        }
+        [TestMethod]
         public void TestMobileNumber_ReturnTrue()
         {
             string excepted = "true";
