@@ -72,5 +72,4 @@ namespace UserRegistration
             Assert.AreEqual(excepted, actual);
         }
     }
-
 }
