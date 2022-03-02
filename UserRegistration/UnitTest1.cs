@@ -12,7 +12,7 @@ namespace UserRegistration
         public void GivenFirstNameShouldReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidateFirstName("Saurav");
+            var actual = UserRegister.ValidateFirstName("Kiran");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
@@ -20,9 +20,9 @@ namespace UserRegistration
         public void GivenFirstNameShouldReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateFirstName("Sa");
+            var actual = UserRegister.ValidateFirstName("Ki");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateFirstName("saurav");
+            var actual1 = UserRegister.ValidateFirstName("kiran");
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
@@ -30,7 +30,7 @@ namespace UserRegistration
         public void GivenLastNameShouldReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidateLastName("Kumar");
+            var actual = UserRegister.ValidateLastName("Bhosale");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
@@ -38,9 +38,9 @@ namespace UserRegistration
         public void GivenLastNameShouldReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateLastName("Ka");
+            var actual = UserRegister.ValidateLastName("Bh");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateLastName("kumar");
+            var actual1 = UserRegister.ValidateLastName("Bhosale");
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
@@ -48,7 +48,7 @@ namespace UserRegistration
         public void GivenEmailIDshouldReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidateEmailID("saurav@gmail.co.in");
+            var actual = UserRegister.ValidateEmailID("bhosalekiran259@gmail.com");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
@@ -56,9 +56,9 @@ namespace UserRegistration
         public void GivenEmailIDShouldReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateEmailID("saurav.kr@g.in");
+            var actual = UserRegister.ValidateEmailID("kiran.kr@g.in");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateEmailID(".kr@gmail.com.in");
+            var actual1 = UserRegister.ValidateEmailID(".kiran@gmail.com.in");
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
@@ -66,7 +66,7 @@ namespace UserRegistration
         public void GivenMobileNumberShouldReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidateMobileNumber("91 7067845485");
+            var actual = UserRegister.ValidateMobileNumber("91 9921925459");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
@@ -74,11 +74,11 @@ namespace UserRegistration
         public void GivenMobileNumberShouldReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateMobileNumber("7067845485");
+            var actual = UserRegister.ValidateMobileNumber("9921925459");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateMobileNumber("23 7067845485");
+            var actual1 = UserRegister.ValidateMobileNumber("23 9921925459");
             Assert.AreEqual(excepted, actual1);
-            var actual2 = UserRegister.ValidateMobileNumber("91 70678454858");
+            var actual2 = UserRegister.ValidateMobileNumber("91 9921925459");
             Assert.AreEqual(excepted, actual2);
         }
         [TestMethod]
@@ -86,7 +86,7 @@ namespace UserRegistration
         public void GivenPasswordShouldReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidatePassword("SauGav76@#$");
+            var actual = UserRegister.ValidatePassword("kiran@992192");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
@@ -94,7 +94,7 @@ namespace UserRegistration
         public void GivenPasswordShouldReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidatePassword("S9a@#$j");
+            var actual = UserRegister.ValidatePassword("K9a@#$j");
             Assert.AreEqual(excepted, actual);
         }
     }
