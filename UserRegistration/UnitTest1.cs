@@ -11,16 +11,16 @@ namespace UserRegistration
             public void TestFirstname_ReturnTrue()
             {
                 string excepted = "true";
-                var actual = UserRegister.ValidateFirstName("Saurav");
+                var actual = UserRegister.ValidateFirstName("Kiran");
                 Assert.AreEqual(excepted, actual);
             }
             [TestMethod]
             public void TestFirstname_ReturnFalse()
             {
                 string excepted = "false";
-                var actual = UserRegister.ValidateFirstName("Sa");
+                var actual = UserRegister.ValidateFirstName("Ki");
                 Assert.AreEqual(excepted, actual);
-                var actual1 = UserRegister.ValidateFirstName("saurav");
+                var actual1 = UserRegister.ValidateFirstName("kiran");
                 Assert.AreEqual(excepted, actual1);
 
             }
