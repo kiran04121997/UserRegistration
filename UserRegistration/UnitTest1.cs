@@ -37,7 +37,7 @@ namespace UserRegistration
             string excepted = "false";
             var actual = UserRegister.ValidateFirstName("kb");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateFirstName("Bhosale");
+            var actual1 = UserRegister.ValidateFirstName("bhosale");
             Assert.AreEqual(excepted, actual1);
 
         }
