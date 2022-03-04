@@ -33,7 +33,7 @@ namespace UserRegistrationProject
                         case 2:
                             Console.WriteLine("Enter Last Name");
                             string lastName = Console.ReadLine();
-                            Console.WriteLine(UserRegister.ValidateFirstName(lastName));
+                            Console.WriteLine(UserRegister.ValidateLastName(lastName));
                             break;
                         default:
                             Console.WriteLine("Enter Correct Option!");
