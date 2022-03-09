@@ -34,16 +34,16 @@ namespace UserRegistrationProject
             var lastNameMatch = ValidatePattern(name, lastNamePattern);
             return lastNameMatch;
         }
-        //Method to Validate Mobile Nuber
+        //Method to Validate Mobile Number
         public static string ValidateMobileNumber(string number)
         {
             var numberMatch = ValidatePattern(number, mobilePattern);
             return numberMatch;
         }
-        //Method to Validate Mobile Nuber
+        //Method to Validate Password4
         public static string ValidatePassword(string pass)
         {
-            var passMatch = ValidatePattern(pass, passwordPatternR3);
+            var passMatch = ValidatePattern(pass, passwordPatternR4);
             return passMatch;
         }
     }
