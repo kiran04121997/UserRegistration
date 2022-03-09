@@ -42,13 +42,13 @@ namespace UserRegistrationProject
             var mailMatch = ValidatePattern(mail, emailPattern);
             return mailMatch;
         }
-        //Method to Validate Mobile Nuber
+        //Method to Validate Mobile Number
         public static string ValidateMobileNumber(string number)
         {
             var numberMatch = ValidatePattern(number, mobilePattern);
             return numberMatch;
         }
-        //Method to Validate Mobile Nuber
+        //Method to Validate PasswordPattern
         public static string ValidatePassword(string pass)
         {
             var passMatch = ValidatePattern(pass, passwordPattern);
