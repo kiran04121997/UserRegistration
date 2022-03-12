@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationProject
 {
-     public class Program
-    {    
+    public class Program
+    {
         //Method to perform UserRegistration
         public static void UserRegistration()
         {
@@ -15,7 +15,7 @@ namespace UserRegistrationProject
             while (Continue)
             {
                 Console.WriteLine("\nChoose Option to Validate with their specified Pattern");
-                Console.WriteLine("1 = First Name\n2 = Last Name\n3 = Email ID\n4 = Mobile Number\n5 = Password\n6 = Sample Email Check\n0 = Exit");
+                Console.WriteLine("1.First Name\n2.Last Name\n3.Email ID\n4.Mobile Number\n5.Password\n6.Sample Email Check\n0.Exit");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
@@ -30,7 +30,7 @@ namespace UserRegistrationProject
                     case 2:
                         Console.WriteLine("Enter Last Name");
                         string lastName = Console.ReadLine();
-                        Console.WriteLine(UserRegister.ValidateFirstName(lastName));
+                        Console.WriteLine(UserRegister.ValidateLastName(lastName));
                         break;
                     case 3:
                         Console.WriteLine("Enter Email ID");
@@ -54,13 +54,22 @@ namespace UserRegistrationProject
                         Console.WriteLine("Enter Correct Option!");
                         break;
                 }
-            }         
+            }
+        }
+        //Method to perform LambdaValidation
+        public static void LambdaValidate()
+        {
+            LambdaValidation.ValidateFirstName();
+            LambdaValidation.ValidateLastName();
+            LambdaValidation.ValidateMobileNumber();
+            LambdaValidation.ValidateEmail();
         }
         //Program Entry Point
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Program");
             UserRegistration();
+            LambdaValidate();
             Console.ReadLine();
         }
     }

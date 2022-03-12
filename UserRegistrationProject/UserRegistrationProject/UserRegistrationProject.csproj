@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LambdaValidation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRegister.cs" />
-    <Compile Include="UserRegisterException.cs" />
-    <Compile Include="UserRegisterExceptionClass.cs" />
+    <Compile Include="UserRegistrationException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

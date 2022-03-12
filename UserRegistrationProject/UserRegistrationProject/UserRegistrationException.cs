@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationProject
 {
-
     //class inheriting Base class
-    public class UserRegisterExceptionClass : Exception
+    public class UserRegisterException : Exception
     {
         public ExceptionType type;
         //Enumeration
@@ -17,7 +16,7 @@ namespace UserRegistrationProject
             EXCEPTION
         }
         //Exception class Constructor.
-        public UserRegisterExceptionClass(ExceptionType type, string message) : base(message)
+        public UserRegisterException(ExceptionType type, string message) : base(message)
         {
             this.type = type;
         }

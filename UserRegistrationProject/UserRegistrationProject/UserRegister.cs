@@ -12,10 +12,11 @@ namespace UserRegistrationProject
         // Static Variable
         public static string firstNamePattern = "^[A-Z]{1}[a-z]{2}";
         public static string lastNamePattern = "^[A-Z]{1}[a-z]{2}";
-        public static string emailPattern = "^[a-zA-z]{3}([.]*[a-zA-Z])+[@]([a-z]{3,})+([.][a-z]{2,3})*$";
+        public static string emailPattern = "^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+.)+[a-z]{2,5}$";
         public static string mobilePattern = "^([9][1])[ ]*[6-9]{1}[0-9]{9}$";
         public static string passwordPattern = "^(?=.*?[0-9])(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[@#$&*.!?]).{8,}";
         public static string sampleEmailPattern = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z0-9]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
+     
         //Exception Handling
         public static string ValidatePattern(string userInput, string pattern)
         {
@@ -27,7 +28,7 @@ namespace UserRegistrationProject
                 }
                 else
                 {
-                    throw new UserRegisterExceptionClass(UserRegisterExceptionClass.ExceptionType.EXCEPTION, "false");
+                    throw new UserRegisterException(UserRegisterException.ExceptionType.EXCEPTION, "false");
                 }
             }
             catch (Exception ex)
@@ -47,13 +48,13 @@ namespace UserRegistrationProject
             var lastNameMatch = ValidatePattern(name, lastNamePattern);
             return lastNameMatch;
         }
-        //Method to Validate Mobile Nuber
+        //Method to Validate Mobile Number
         public static string ValidateEmailID(string mail)
         {
             var mailMatch = ValidatePattern(mail, emailPattern);
             return mailMatch;
         }
-        //Method to Validate Mobile Nuber
+        //Method to Validate Mobile Number
         public static string ValidateMobileNumber(string number)
         {
             var numberMatch = ValidatePattern(number, mobilePattern);
