@@ -61,7 +61,7 @@ namespace UserRegistration
         public void TestPassword_ReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidatePassword("Kiran9921");
+            var actual = UserRegister.ValidatePassword("Kiran@9921");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
