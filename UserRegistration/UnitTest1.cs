@@ -18,9 +18,9 @@ namespace UserRegistration
         public void TestFirstName_ReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateFirstName("Ki");
+            var actual = UserRegister.ValidateFirstName("Ka");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateFirstName("Kiran");
+            var actual1 = UserRegister.ValidateFirstName("kiran");
             Assert.AreEqual(excepted, actual1);
         }
         [TestMethod]
@@ -34,7 +34,7 @@ namespace UserRegistration
         public void TestLastName_ReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateLastName("Bh");
+            var actual = UserRegister.ValidateLastName("bh");
             Assert.AreEqual(excepted, actual);
             var actual1 = UserRegister.ValidateLastName("bhosale");
             Assert.AreEqual(excepted, actual1);
@@ -43,25 +43,25 @@ namespace UserRegistration
         public void TestMobileNumber_ReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidateMobileNumber("91 9921925459");
+            var actual = UserRegister.ValidateMobileNumber("+91-7067845485");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
         public void TestMobileNumber_ReturnFalse()
         {
             string excepted = "false";
-            var actual = UserRegister.ValidateMobileNumber("9921925459");
+            var actual = UserRegister.ValidateMobileNumber("7067845485");
             Assert.AreEqual(excepted, actual);
-            var actual1 = UserRegister.ValidateMobileNumber("239921925459");
+            var actual1 = UserRegister.ValidateMobileNumber("23 7067845485");
             Assert.AreEqual(excepted, actual1);
-            var actual2 = UserRegister.ValidateMobileNumber("91 9921925459");
+            var actual2 = UserRegister.ValidateMobileNumber("91 70678454858");
             Assert.AreEqual(excepted, actual2);
         }
         [TestMethod]
         public void TestPassword_ReturnTrue()
         {
             string excepted = "true";
-            var actual = UserRegister.ValidatePassword("kiran@992192");
+            var actual = UserRegister.ValidatePassword("Kiran9921");
             Assert.AreEqual(excepted, actual);
         }
         [TestMethod]
